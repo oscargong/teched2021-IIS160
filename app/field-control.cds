@@ -17,14 +17,14 @@ extend projection TravelService.Travel with {
 }
 
 annotate TravelService.Travel {
-
   BookingFee    @Common.FieldControl  : TravelStatus.fieldControl;
   BeginDate       @Common.FieldControl  : TravelStatus.fieldControl;
   EndDate         @Common.FieldControl  : TravelStatus.fieldControl;
   to_Agency       @Common.FieldControl  : TravelStatus.fieldControl;
   to_Customer     @Common.FieldControl  : TravelStatus.fieldControl;
+} 
 
-  } actions {
+actions {
   rejectTravel @(
     Core.OperationAvailable : in.rejectEnabled,
     Common.SideEffects.TargetProperties : [
@@ -56,7 +56,6 @@ annotate TravelService.Booking with @UI.CreateHidden : to_Travel.TravelStatus.cr
 }};
 
 annotate TravelService.Booking {
-
   BookingDate   @Core.Computed;
   ConnectionID  @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;
   FlightDate    @Common.FieldControl  : to_Travel.TravelStatus.fieldControl;

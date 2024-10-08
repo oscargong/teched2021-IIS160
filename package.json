@@ -6,6 +6,7 @@
   "dependencies": {
     "@sap/audit-logging": "^5.5.3",
     "@sap/cds": "^6.8.1",
+    "@sap/cds-dk": "^6.8.1",
     "@sap/xsenv": "^3.2.2",
     "@sap/xssec": ">=3.6.0",
     "express": "^4.18.1",
@@ -13,6 +14,7 @@
     "passport": ">=0.6.0"
   },
   "devDependencies": {
+    "@sap/ux-specification": "UI5-1.129",
     "chai": "^4.3.6",
     "chai-as-promised": "^7.1.1",
     "chai-subset": "^1.6.0",
@@ -25,7 +27,9 @@
   },
   "scripts": {
     "start": "cds run",
-    "test": "jest --runInBand"
+    "test": "jest --runInBand",
+    "watch-managetravels": "PORT=4005 cds watch --open managetravels/webapp/index.html?sap-ui-xx-viewCache=false#fe-lrop-v4",
+    "local-watch": "PORT=4005 node './node_modules/@sap/cds-dk/bin/cds.js' watch --open managetravels/webapp/index.html"
   },
   "cds": {
     "requires": {
@@ -56,5 +60,8 @@
     "testTimeout": 20000
   },
   "license": "SAP SAMPLE CODE LICENSE",
-  "private": true
+  "private": true,
+  "sapux": [
+    "app/managetravels"
+  ]
 }
