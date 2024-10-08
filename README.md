@@ -7,6 +7,8 @@
 This repository contains the material for the SAP TechEd 2021 session\
 **IIS160 - Accelerate the Development of SAP Fiori Apps Using SAP Fiori Elements**.
 
+https://github.com/SAP-samples/teched2021-IIS160
+
 ## Overview
 
 The use of SAP Fiori elements with OData V4 and SAP Cloud Application Programming Model allows you to\
